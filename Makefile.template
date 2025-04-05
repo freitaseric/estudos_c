@@ -1,0 +1,15 @@
+CC = gcc
+CFLAGS = -Wall -Wextra -std=c11 -g
+TARGET = PROGRAM_NAME
+
+all: $(TARGET)
+
+$(TARGET): PROGRAM_NAME.c
+	$(CC) $(CFLAGS) PROGRAM_NAME.c -o $(TARGET)
+	@echo "$(TARGET) program successfully compiled!"
+
+clean:
+	@echo "Cleaning generated outputs..."
+	rm -f $(TARGET)
+
+.PHONY: all clean
