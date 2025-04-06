@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-#define FAHRENHEIT_TO_CELCIUS(f) ((f - 32) * 5) / 9
+#define CELCIUS_TO_FAHRENHEIT(c) (9 * c + 160) / 5
 
 int main(void)
 {
   float fahrenheit, celcius;
-  printf("Informe uma temperatura em fahrenheit: ");
-  scanf("%f", &fahrenheit);
+  printf("Informe uma temperatura em celcius: ");
+  scanf("%f", &celcius);
 
-  celcius = FAHRENHEIT_TO_CELCIUS(fahrenheit);
+  fahrenheit = CELCIUS_TO_FAHRENHEIT(celcius);
 
-  printf("Isso fica %3.1f°C\n", celcius);
+  printf("Isso fica %3.1f°F\n", fahrenheit);
 
   return 0;
 }
